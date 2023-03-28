@@ -1,0 +1,46 @@
+{
+  "version": "https://schema.openattestation.com/3.0/schema.json",
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://schemata.openattestation.com/com/openattestation/1.0/OpenAttestation.v3.json",
+    "https://schemata.openattestation.com/com/openattestation/1.0/DrivingLicenceCredential.json"
+  ],
+  "type": [
+    "VerifiableCredential",
+    "OpenAttestationCredential",
+    "DrivingLicenceCredential"
+  ],
+  "issuer": {
+    "id": "https://example.com/issuers/987654321",
+    "name": "XYZ Pte Ltd"
+  },
+  "issuanceDate": "2023-01-15T10:00:00.0000000-07:00",
+  "credentialSubject": {
+    "id": "123456789",
+    "name": "Mary Jane",
+    "birthDate": "2000-01-01"
+  },
+  "openAttestationMetadata": {
+    "template": {
+      "name": "SAMPLE_V3",
+      "type": "EMBEDDED_RENDERER",
+      "url": "http://127.0.0.1:5173"
+    },
+    "proof": {
+      "type": "OpenAttestationProofMethod",
+      "method": "DID",
+      "value": "did:ethr:0x1245e5B64D785b25057f7438F715f4aA5D965733",
+      "revocation": {
+        "type": "NONE"
+      }
+    },
+    "identityProof": {
+      "type": "DNS-DID",
+      "identifier": "demo-tradetrust.openattestation.com"
+    }
+  },
+  "network": {
+    "chain": "ETH",
+    "chainId": "11155111"
+  }
+}

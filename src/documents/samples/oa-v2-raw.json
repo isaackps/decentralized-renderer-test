@@ -1,0 +1,25 @@
+{
+  "$template": {
+    "name": "SAMPLE_V2",
+    "type": "EMBEDDED_RENDERER",
+    "url": "http://127.0.0.1:5173"
+  },
+  "issuers": [
+    {
+      "name": "ABC Pte Ltd",
+      "documentStore": "0x1245e5B64D785b25057f7438F715f4aA5D965733",
+      "identityProof": {
+        "type": "DNS-TXT",
+        "location": "demo-tradetrust.openattestation.com"
+      }
+    }
+  ],
+  "recipient": {
+    "name": "John Doe"
+  },
+  "birthDate": "1999-01-01",
+  "network": {
+    "chain": "ETH",
+    "chainId": "11155111"
+  }
+}
