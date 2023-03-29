@@ -34,6 +34,6 @@ export const templateRegistry: TemplateRegistry<any> = {
   ],
 };
 
-export const DocumentRenderer = () => (
+export const DecentralizedRenderer = () => (
   <FramedDocumentRenderer templateRegistry={templateRegistry} />
 );

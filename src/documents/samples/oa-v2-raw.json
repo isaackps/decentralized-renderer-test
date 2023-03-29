@@ -2,15 +2,15 @@
   "$template": {
     "name": "SAMPLE_V2",
     "type": "EMBEDDED_RENDERER",
-    "url": "http://127.0.0.1:5173"
+    "url": "<YOUR_HOSTED_RENDERER_URL>"
   },
   "issuers": [
     {
       "name": "ABC Pte Ltd",
-      "documentStore": "0x1245e5B64D785b25057f7438F715f4aA5D965733",
+      "documentStore": "<YOUR_DOCUMENT_STORE_ADDRESS>",
       "identityProof": {
         "type": "DNS-TXT",
-        "location": "demo-tradetrust.openattestation.com"
+        "location": "<YOUR_DOMAIN>"
       }
     }
   ],

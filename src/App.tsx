@@ -1,6 +1,6 @@
 import "./App.css";
-import { DocumentRenderer } from "./components/DocumentRenderer";
+import { DecentralizedRenderer } from "./components/DecentralizedRenderer";
 
 export const App = () => {
-  return <DocumentRenderer />;
+  return <DecentralizedRenderer />;
 };
