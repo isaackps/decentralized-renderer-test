@@ -12,7 +12,7 @@ The decentralized renderer code here is based off OpenAttestation's [decentraliz
 
 To stay as simple and less opinionated as possible, these are omitted:
 
-- Styling libraries. (Recommended to use [Tailwind](https://tailwindcss.com/docs/installation), otherwise can use modules.css directly)
+- Styling libraries. (Recommended to use [Tailwind](https://tailwindcss.com/docs/installation), otherwise can use module.css directly)
 - Testing frameworks.
 - [Core components](https://github.com/Open-Attestation/decentralized-renderer-react-template/tree/master/examples/core).
 - CI pipelines.
@@ -29,9 +29,15 @@ To stay as simple and less opinionated as possible, these are omitted:
 
 ---
 
+### Prerequisite
+
+- Node (optionally, use [nvm](https://github.com/nvm-sh/nvm) to manage node version)
+  - Node version 14 onwards.
+
 ### Development
 
 ```sh
+npm i
 npm run start
 ```
 
@@ -57,4 +63,4 @@ Head off to `http://localhost:6006/` to see storybook, while `http://127.0.0.1:8
 npm run build
 ```
 
-Host your `dist` folder in your favourite hosting provider.
+Host your `dist` folder in your favourite hosting provider. One example could be [netlify](https://www.netlify.com/).
