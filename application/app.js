@@ -29,7 +29,7 @@
       frame.dispatch(getTemplatesAction).then((templates) => {
         templates.forEach((tab) => {
           const btn = document.createElement("button");
-          btn.innerHTML = tab.label;
+          btn.innerHTML = `${tab.label}`;
           btn.id = `selector-${tab.id}`;
           btn.onclick = () => {
             frame.dispatch(selectTemplateAction(tab.id));
