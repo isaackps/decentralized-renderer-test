@@ -9,13 +9,18 @@ interface ErrorBoundaryState {
   error: { message: string; stack: string };
 }
 
-export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+export class ErrorBoundary extends React.Component<
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: { message: "", stack: "" } };
   }
 
-  static getDerivedStateFromError(error: ErrorBoundaryState["error"]): ErrorBoundaryState {
+  static getDerivedStateFromError(
+    error: ErrorBoundaryState["error"]
+  ): ErrorBoundaryState {
     // Update state so the next render will show the fallback UI.
     return { hasError: true, error };
   }
@@ -25,9 +30,12 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
       // You can render any custom fallback UI
       return (
         <div>
-          <h1 className="text-xl font-bold mb-2">Template renderer encountered an error</h1>
+          <h1 className="text-xl font-bold mb-2">
+            Template renderer encountered an error
+          </h1>
           <div className="mb-2">
-            <span className="font-medium">Message:</span> {this.state.error.message}
+            <span className="font-medium">Message:</span>{" "}
+            {this.state.error.message}
           </div>
           <div className="mb-2">
             <span className="font-medium">Stack:</span> {this.state.error.stack}

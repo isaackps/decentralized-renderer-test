@@ -16,7 +16,6 @@ const Content = (document: TemplateADocument): JSX.Element => {
           </tr>
         </thead>
         <tbody>
-          
           <tr>
             <td className="border border-black p-2">{document.data1}</td>
             <td className="border border-black p-2">{document.data2}</td>
@@ -27,14 +26,15 @@ const Content = (document: TemplateADocument): JSX.Element => {
   );
 };
 
-
-export const TemplateAWithWrapperAndErrorBoundry: FunctionComponent<TemplateProps<TemplateASchema>> = ({ document }) => {
+export const TemplateAWithWrapperAndErrorBoundry: FunctionComponent<
+  TemplateProps<TemplateASchema>
+> = ({ document }) => {
   const documentData = getDocumentData(document) as TemplateADocument;
   return (
     <>
-    <Wrapper data-testid="bill-of-lading-template">
-      <div className="mb-8">{Content(documentData)}</div>
-    </Wrapper>
+      <Wrapper data-testid="bill-of-lading-template">
+        <div className="mb-8">{Content(documentData)}</div>
+      </Wrapper>
     </>
   );
 };

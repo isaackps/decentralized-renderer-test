@@ -1,9 +1,9 @@
-import { TemplateBWithPrivacyFilter } from "./TemplateBWithPrivacyFilter";
+import { TemplateBWithSelectiveRedaction } from "./TemplateBWithSelectiveRedaction";
 
 export const TemplateBTemplates = [
   {
     id: "template-b",
-    label: "Template B with privacy filter",
-    template: TemplateBWithPrivacyFilter,
+    label: "Template B with SelectiveRedaction",
+    template: TemplateBWithSelectiveRedaction,
   },
 ];

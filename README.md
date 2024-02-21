@@ -1,6 +1,6 @@
 # TradeTrust Decentralized Renderer (React Template)
 
-This template serves as a quick way to start building your own decentralized renderer using OpenAttestation stack.
+This template serves as a quick way to start building your own decentralized renderer using TradeTrust stack. You can follow our tutorial over at (https://docs.tradetrust.io/docs/tutorial/decentralised-renderer/).
 
 ## How and what?
 
@@ -29,38 +29,59 @@ To stay as simple and less opinionated as possible, these are omitted:
 ### Prerequisite
 
 - Node (optionally, use [nvm](https://github.com/nvm-sh/nvm) to manage node version)
-  - Node version 14 onwards.
+- Node version 18 onwards.
+
+## Install
+
+The easiest way to use **tradetrust-decentralized-renderer-template** is through github by clicking on `Use this template` button in the repository page.
+
+You can also download or `git clone` this repo
+
+```sh
+git clone https://github.com/TradeTrust/tradetrust-decentralized-renderer.git
+cd tradetrust-decentralized-renderer
+rm -rf .git
+npm install
+```
+
+Make sure to edit the following files according to your module's info:
+
+- package.json (module name and version)
+- README.md
+- LICENSE
+- add your own template (in `src/templates` folder) and configure correctly the template registry (in `src/templates/index.tsx` file)
 
 ### Development
 
 ```sh
-npm i
-npm run start
+npm run storybook
 ```
 
-Head off to `http://localhost:6006/` to see storybook, while `http://127.0.0.1:8080/` to see your actual document rendered in a dummy application.
+Head off to `http://localhost:6006/` to see storybook.
 
 ### Core Components
 
-Core components, located in the `src/core directory`, are reusable React components that offer enhanced functionalities for renderer templates.
+Core components, located in the `src/core directory`, are reusable React components that offer enhanced functionalities for renderer templates. When you run `npm run storybook`, the example templates with core components will be displayed.
 
 This repository contains a collection of example templates along with demonstrations of how to use core components. You can find these examples in the `/src/templates` directory. These templates serve as references and guides to help you set up your own templates to meet your unique requirements.
 
 #### DocumentQrCode
+
 It allows users to share documents across devices using a QR code.
 
 For detailed information on how to use the QR Code Component, please refer to the official documentation [here](https://docs.tradetrust.io/docs/reference/tradetrust-website/qr-code/).
 
-#### Wrapper/ Error Boundary
-The Wrapper/Error Boundary Component is designed to handle scenarios where a template cannot be rendered correctly. In such cases, this component acts as a fallback, displaying a user-friendly error message and stack.
+#### Wrapper/ ErrorBoundary
 
-#### PrivacyFilter
+The Wrapper/ErrorBoundary Component is designed to handle scenarios where a template cannot be rendered correctly. In such cases, this component acts as a fallback, displaying a user-friendly error message and stack.
 
-The Privacy Filter Component is a powerful tool for safeguarding sensitive information within a document. To use the Privacy Filter in the decentralized renderer, follow these steps
+#### SelectiveRedaction
 
-- Click the "Edit Document" button within the PrivacyFilter component.
+The SelectiveRedaction Component is a powerful tool for safeguarding sensitive information within a document. To use the SelectiveRedaction in the decentralized renderer, follow these steps
+
+- Click the "Edit Document" button within the SelectiveRedaction component.
 - Click "Remove" on the redactable values to specify the information you want to remove.
-- Click "Done" on the Privacy Filter Component to complete the process.
+- Click "Done" on the Component to complete the process.
 - Download the document with hidden values
 
 #### PrintWatermark

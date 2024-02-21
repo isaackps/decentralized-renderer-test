@@ -14,7 +14,7 @@ export const TemplateATemplates = [
     template: TemplateAWithWrapperAndErrorBoundry,
   },
   {
-    id: "template-a-with-qr",
+    id: "template-a-with-watermark",
     label: "With water mark",
     template: TemplateAWithWaterMark,
   },
