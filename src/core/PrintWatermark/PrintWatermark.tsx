@@ -1,6 +1,6 @@
 /// <reference types="@emotion/react/types/css-prop" />
 
-import React, { FunctionComponent } from "react";
+import React from "react";
 import { css } from "@emotion/react";
 import watermark from "./watermark.svg";
 

@@ -1,6 +1,5 @@
 import { TemplateProps } from "@tradetrust-tt/decentralized-renderer-react-components";
 import React, { FunctionComponent } from "react";
-import { DocumentQrCode } from "../../../core/DocumentQrCode";
 import { Wrapper } from "../../../core/Wrapper";
 import { getDocumentData } from "../../../utils";
 import { TemplateADocument, TemplateASchema } from "./types";
