@@ -1,4 +1,4 @@
-import { v2 } from "@tradetrust-tt/tradetrust";
+import { v2 } from "@trustvc/trustvc";
 import { TemplateBSchemaV2 } from "./types";
 
 export const TemplateBSampleV2: TemplateBSchemaV2 = {
@@ -10,7 +10,8 @@ export const TemplateBSampleV2: TemplateBSchemaV2 = {
   issuers: [
     {
       name: "abc",
-      documentStore: "0xdae63761283e048fe4989bc0231007b592ccc62f8f7105c934ea6e58225fa33e",
+      documentStore:
+        "0xdae63761283e048fe4989bc0231007b592ccc62f8f7105c934ea6e58225fa33e",
       identityProof: {
         type: v2.IdentityProofType.DNSTxt,
         location: "example.tradetrust.io",

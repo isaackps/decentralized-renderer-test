@@ -1,4 +1,4 @@
-import { v3 } from "@tradetrust-tt/tradetrust";
+import { v3 } from "@trustvc/trustvc";
 import { TemplateAV3 } from "./types";
 
 export const TemplateASampleV3: TemplateAV3 = {
@@ -30,7 +30,7 @@ export const TemplateASampleV3: TemplateAV3 = {
     },
   },
   credentialSubject: {
-    data1: 'data1',
-    data2: 'data2',
-  }
- };
+    data1: "data1",
+    data2: "data2",
+  },
+};

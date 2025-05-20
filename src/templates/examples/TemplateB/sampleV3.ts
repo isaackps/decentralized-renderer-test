@@ -1,4 +1,4 @@
-import { v3 } from "@tradetrust-tt/tradetrust";
+import { v3 } from "@trustvc/trustvc";
 import { TemplateBSchemaV3 } from "./types";
 
 export const TemplateBSampleV3: TemplateBSchemaV3 = {

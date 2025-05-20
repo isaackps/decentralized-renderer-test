@@ -1,12 +1,10 @@
-import { v2, v3 } from "@tradetrust-tt/tradetrust";
+import { v2, v3 } from "@trustvc/trustvc";
 
 export type TemplateBSchemaV2 = v2.OpenAttestationDocument & TemplateB;
 
 export type TemplateBSchemaV3 = v3.OpenAttestationDocument & {
   credentialSubject: TemplateB;
 };
-
-
 
 export type TemplateBSchema = TemplateBSchemaV2 | TemplateBSchemaV3;
 
