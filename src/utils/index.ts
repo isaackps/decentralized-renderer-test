@@ -1,8 +1,8 @@
 import {
   isRawV3Document,
+  OpenAttestationDocument,
   SignedVerifiableCredential,
   vc,
-  OpenAttestationDocument,
 } from "@trustvc/trustvc";
 
 /**
@@ -13,7 +13,7 @@ import {
 export const getDocumentData = (
   document: OpenAttestationDocument | SignedVerifiableCredential
 ): any => {
-  if (isRawV3Document(document) || vc.isSignedDocument(document)) {
+  if (isRawV3Document(document) || vc.isSignedDocument(document) || vc.isRawDocument(document)) {
     return document.credentialSubject;
   } else {
     return document;
