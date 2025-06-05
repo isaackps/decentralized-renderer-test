@@ -11,7 +11,7 @@ import {
   IconRedact,
   SelectiveRedaction,
 } from "../../../core/SelectiveRedaction";
-import { getDocumentData } from "../../../utils";
+import { getDocumentData, getQRCodeLink } from "../../../utils";
 import { TemplateB, TemplateBSchema } from "./types";
 
 const CustomStyles = styled.div`
@@ -64,7 +64,7 @@ export const TemplateBWithSelectiveRedaction: FunctionComponent<
     taxTotal = 0,
     total = 0,
   } = documentData;
-  const qrCodeUrl = documentData?.links?.self.href;
+  const qrCodeUrl = getQRCodeLink(document);
   return (
     <>
       <Wrapper data-testid="invoice-template">

@@ -1,7 +1,7 @@
 import { TemplateProps } from "@tradetrust-tt/decentralized-renderer-react-components";
 import React, { FunctionComponent } from "react";
 import { DocumentQrCode } from "../../../core/DocumentQrCode";
-import { getDocumentData } from "../../../utils";
+import { getDocumentData, getQRCodeLink } from "../../../utils";
 import { TemplateADocument, TemplateASchema } from "./types";
 
 const Content = (document: TemplateADocument): JSX.Element => {
@@ -15,7 +15,6 @@ const Content = (document: TemplateADocument): JSX.Element => {
           </tr>
         </thead>
         <tbody>
-          
           <tr>
             <td className="border border-black p-2">{document.data1}</td>
             <td className="border border-black p-2">{document.data2}</td>
@@ -26,10 +25,11 @@ const Content = (document: TemplateADocument): JSX.Element => {
   );
 };
 
-
-export const TemplateAWithQRCode: FunctionComponent<TemplateProps<TemplateASchema>> = ({ document }) => {
+export const TemplateAWithQRCode: FunctionComponent<
+  TemplateProps<TemplateASchema>
+> = ({ document }) => {
   const documentData = getDocumentData(document) as TemplateADocument;
-  const qrCodeUrl = documentData?.links?.self.href;
+  const qrCodeUrl = getQRCodeLink(document);
   return (
     <>
       <div className="mb-8">{Content(documentData)}</div>
