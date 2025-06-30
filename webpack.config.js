@@ -44,8 +44,16 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.ContextReplacementPlugin(
+      /(@mattrglobal\/node-bbs-signatures)/,
+      `${__dirname}/node_modules/@mattrglobal/node-bbs-signatures`,
+      {}
+    ),
     new webpack.ProvidePlugin({
       Buffer: ["buffer", "Buffer"],
+    }),
+    new webpack.ProvidePlugin({
+      process: "process/browser",
     }),
     new webpack.EnvironmentPlugin(["NODE_ENV"]),
     new HtmlWebpackPlugin({

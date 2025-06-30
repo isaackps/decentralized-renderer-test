@@ -3,6 +3,7 @@ import { ErrorBoundary } from "../ErrorBoundary";
 
 interface WrapperProps {
   children: ReactNode;
+  [key: string]: any;
 }
 // `container mx-auto px-4` <- this is in line with tt and creator's tw config, so containers can align
 export const Wrapper: FunctionComponent<WrapperProps> = ({

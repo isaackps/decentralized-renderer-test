@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import QRCode from "qrcode.react";
+import { QRCodeSVG } from "qrcode.react";
 import React, { FunctionComponent } from "react";
 import qrcodeImg from "/static/images/logo-qrcode.png";
 const Print = styled.div`
@@ -38,7 +38,7 @@ export const DocumentQrCode: FunctionComponent<DocumentQrCode> = ({ url }) => {
 
   return (
     <Print>
-      <QRCode value={url} level="M" size={400} imageSettings={imageSettings} />
+      <QRCodeSVG data-testid="document-qrcode" value={url} level="M" size={400} imageSettings={imageSettings} />
       <div style={{ fontSize: 32, marginLeft: 64 }}>
         Scan the QR code with a QR code scanner device.
       </div>

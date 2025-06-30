@@ -30,10 +30,8 @@ export const TemplateAWithWrapperAndErrorBoundry: FunctionComponent<
 > = ({ document }) => {
   const documentData = getDocumentData(document) as TemplateADocument;
   return (
-    <>
-      <Wrapper data-testid="bill-of-lading-template">
-        <div className="mb-8">{Content(documentData)}</div>
-      </Wrapper>
-    </>
+    <Wrapper data-testid="bill-of-lading-template">
+      <div className="mb-8">{Content(documentData)}</div>
+    </Wrapper>
   );
 };
