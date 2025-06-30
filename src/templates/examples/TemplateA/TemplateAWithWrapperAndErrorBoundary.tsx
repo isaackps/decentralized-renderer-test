@@ -25,7 +25,7 @@ const Content = (document: TemplateADocument): JSX.Element => {
   );
 };
 
-export const TemplateAWithWrapperAndErrorBoundry: FunctionComponent<
+export const TemplateAWithWrapperAndErrorBoundary: FunctionComponent<
   TemplateProps<TemplateASchema>
 > = ({ document }) => {
   const documentData = getDocumentData(document) as TemplateADocument;

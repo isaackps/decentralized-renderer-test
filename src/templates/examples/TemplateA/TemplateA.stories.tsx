@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import { TemplateAWithQRCode } from "./TemplateAWithQRCode";
 import { TemplateASampleV2 } from "./sampleV2";
 import { TemplateAWithWaterMark } from "./TemplateAWithWaterMark";
-import { TemplateAWithWrapperAndErrorBoundry } from "./TemplateAWithWrapperAndErrorBoundry";
+import { TemplateAWithWrapperAndErrorBoundary } from "./TemplateAWithWrapperAndErrorBoundary";
 
 export default {
   title: "TemplateA",
@@ -16,8 +16,8 @@ export const TemplateWithQRCode: FunctionComponent = () => {
   return <TemplateAWithQRCode document={TemplateASampleV2} handleObfuscation={() => {}} />;
 };
 
-export const TemplateWithWrapperAndErrorBoundry: FunctionComponent = ()=> {
-  return <TemplateAWithWrapperAndErrorBoundry document={TemplateASampleV2} handleObfuscation={() => {}} />;
+export const TemplateWithWrapperAndErrorBoundary: FunctionComponent = ()=> {
+  return <TemplateAWithWrapperAndErrorBoundary document={TemplateASampleV2} handleObfuscation={() => {}} />;
 }
 
 export const TemplateWithWaterMark: FunctionComponent = ()=> {

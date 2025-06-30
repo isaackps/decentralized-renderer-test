@@ -25,3 +25,4 @@ dist-ssr
 
 storybook-static
 docs
+src/main.css

@@ -1,6 +1,6 @@
 import { TemplateAWithQRCode } from "./TemplateAWithQRCode";
 import { TemplateAWithWaterMark } from "./TemplateAWithWaterMark";
-import { TemplateAWithWrapperAndErrorBoundry } from "./TemplateAWithWrapperAndErrorBoundry";
+import { TemplateAWithWrapperAndErrorBoundary } from "./TemplateAWithWrapperAndErrorBoundary";
 
 export const TemplateATemplates = [
   {
@@ -9,9 +9,9 @@ export const TemplateATemplates = [
     template: TemplateAWithQRCode,
   },
   {
-    id: "template-a-with-wrapper-and-error-boundry",
-    label: "Template with Wrapper and Error Boundry",
-    template: TemplateAWithWrapperAndErrorBoundry,
+    id: "template-a-with-wrapper-and-error-boundary",
+    label: "Template with Wrapper and Error Boundary",
+    template: TemplateAWithWrapperAndErrorBoundary,
   },
   {
     id: "template-a-with-watermark",

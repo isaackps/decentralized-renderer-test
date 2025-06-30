@@ -10,21 +10,21 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "run-s check-types build:app",
+    "build": "run-s check-types build:css build:app",
+    "build:css": "cross-env NODE_ENV=production tailwindcss -c tailwind.config.js -i src/tailwind.css -o src/main.css",
     "build:app": "cross-env NODE_ENV=production webpack --progress --mode production",
     "check-types": "tsc --sourceMap false --noEmit",
-    "dev": "run-s dev:server",
+    "dev": "run-s build:css dev:server",
     "dev:server": "cross-env NODE_ENV=development webpack-dev-server",
-    "storybook": "storybook dev -p 6006",
-    "storybook:start": "storybook dev -s ./ -p 6006",
-    "storybook:build": "storybook build -o docs",
-    "build-storybook": "storybook build"
+    "storybook": "run-s build:css storybook:start",
+    "storybook:start": "storybook dev -p 6006",
+    "storybook:build": "npm run build:css && storybook build -o docs",
+    "build-storybook": "npm run build:css && storybook build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@tradetrust-tt/decentralized-renderer-react-components": "^3.16.9",
-    "@tradetrust-tt/tradetrust-ui-components": "^3.3.2",
     "@trustvc/trustvc": "^1.5.4",
     "date-fns": "^3.3.1",
     "debug": "^4.3.4",
@@ -32,6 +32,7 @@
     "qrcode.react": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
