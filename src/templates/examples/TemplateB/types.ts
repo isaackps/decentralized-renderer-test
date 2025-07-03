@@ -1,4 +1,5 @@
-import { v2, v3 } from "@trustvc/trustvc";
+import { SignedVerifiableCredential, v2, v3 } from "@trustvc/trustvc";
+import { CredentialSubject } from "@trustvc/trustvc/w3c/vc";
 
 export type TemplateBSchemaV2 = v2.OpenAttestationDocument & TemplateB;
 
@@ -6,7 +7,11 @@ export type TemplateBSchemaV3 = v3.OpenAttestationDocument & {
   credentialSubject: TemplateB;
 };
 
-export type TemplateBSchema = TemplateBSchemaV2 | TemplateBSchemaV3;
+export type TemplateBSchemaW3C = SignedVerifiableCredential & {
+  credentialSubject: CredentialSubject & TemplateB;
+};
+
+export type TemplateBSchema = TemplateBSchemaV2 | TemplateBSchemaV3 | TemplateBSchemaW3C;
 
 export interface TemplateB {
   id?: string;

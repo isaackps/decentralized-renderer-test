@@ -1,35 +1,28 @@
 import { v3 } from "@trustvc/trustvc";
-import { TemplateBSchemaV3 } from "./types";
+import { TemplateBSchemaW3C } from "./types";
 
-export const TemplateBSampleV3: TemplateBSchemaV3 = {
+export const TemplateBSampleW3C: TemplateBSchemaW3C = {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
-    "https://schemata.openattestation.com/com/openattestation/1.0/OpenAttestation.v3.json",
-    "https://schemata.openattestation.com/io/tradetrust/Invoice/1.0/invoice-context.json",
+    "https://w3id.org/security/bbs/v1",
+    "https://trustvc.io/context/render-method-context.json",
+    "https://trustvc.io/context/attachments-context.json",
+    "https://trustvc.io/context/bill-of-lading.json"
   ],
-  type: ["VerifiableCredential", "OpenAttestationCredential"],
-  issuanceDate: "2010-01-01T19:23:24Z",
-  issuer: {
-    id: "https://example.com",
-    name: "DEMO STORE",
-  },
-  openAttestationMetadata: {
-    template: {
-      type: v3.TemplateType.EmbeddedRenderer,
-      name: "TEMPLATE_B",
-      url: "http://localhost:3000",
-    },
-    proof: {
-      type: v3.ProofType.OpenAttestationProofMethod,
-      method: v3.Method.DocumentStore,
-      value: "0x8bA63EAB43342AAc3AdBB4B827b68Cf4aAE5Caca",
-    },
-    identityProof: {
-      type: v3.IdentityProofType.DNSDid,
-      identifier: "demo-tradetrust.openattestation.com",
-    },
-  },
-  credentialSubject: {
+  "type": [
+    "VerifiableCredential"
+  ],
+  "renderMethod": [
+    {
+      "id": "http://localhost:3000",
+      "type": "EMBEDDED_RENDERER",
+      "templateName": "TEMPLATE_B"
+    }
+  ],
+  "credentialSubject": {
+    "type": [
+      "BillOfLading"
+    ],
     id: "2034",
     date: "2018-02-21",
     customerId: "564",
@@ -77,4 +70,8 @@ export const TemplateBSampleV3: TemplateBSchemaV3 = {
     taxTotal: "0",
     total: "625",
   },
+  "issuanceDate": "2025-07-01T13:08:52.117Z",
+  "expirationDate": "2025-10-01T13:08:52.117Z",
+  "issuer": "did:web:trustvc.github.io:did:1",
+  "id": "urn:bnid:_:0197c61a-c317-7770-bf8e-da0c2ba870a3"
 };

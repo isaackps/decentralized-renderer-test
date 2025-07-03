@@ -4,7 +4,7 @@ import { TemplateAV2 } from "./types";
 export const TemplateASampleV2: TemplateAV2 = {
   $template: {
     type: v2.TemplateType.EmbeddedRenderer,
-    name: "BILL_OF_LADING",
+    name: "TEMPLATE_A",
     url: "http://localhost:3000",
   },
   issuers: [

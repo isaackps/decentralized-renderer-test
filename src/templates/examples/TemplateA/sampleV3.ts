@@ -16,7 +16,7 @@ export const TemplateASampleV3: TemplateAV3 = {
   openAttestationMetadata: {
     template: {
       type: v3.TemplateType.EmbeddedRenderer,
-      name: "BILL_OF_LADING",
+      name: "TEMPLATE_A",
       url: "https://generic-templates.tradetrust.io",
     },
     proof: {

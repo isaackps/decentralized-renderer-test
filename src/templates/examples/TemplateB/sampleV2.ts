@@ -4,7 +4,7 @@ import { TemplateBSchemaV2 } from "./types";
 export const TemplateBSampleV2: TemplateBSchemaV2 = {
   $template: {
     type: v2.TemplateType.EmbeddedRenderer,
-    name: "INVOICE",
+    name: "TEMPLATE_B",
     url: "http://localhost:3000",
   },
   issuers: [
